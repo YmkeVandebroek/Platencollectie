@@ -1,0 +1,135 @@
+html{
+  font-family: 'Quicksand', sans-serif;
+}
+
+header{
+  background-color: #3E78B2;
+}
+
+.menu {
+	position: absolute;
+	top: 3vh;
+	right: 10vw;
+}
+
+h1{
+  font-family: Times;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+nav{
+	flex-direction: column;
+  display: none;
+  margin-bottom: 1vh;
+}
+
+nav a{
+  color: black;
+  margin: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 0.1rem solid black;
+  color: black;
+}
+
+nav a:hover{
+  color: lightgrey;
+}
+
+main{
+  background-color: white;
+  padding: 1rem;
+}
+
+.afbeeldingloop{
+  height: 25vh;
+  background-image: url("https://cdn.mos.cms.futurecdn.net/mirBuezANQbuVqbPwrDX65.jpg");
+  background-size: cover;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+a{
+  display: block;
+  break-inside: avoid;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+  margin-bottom: 1rem;
+}
+
+.grid{
+  column-count: 1;
+  background-color: white;
+  break-inside: avoid;
+}
+
+.verborgen{
+  display: none;
+}
+
+footer{
+  background-color: #3E78B2;
+  font-size: 1.5rem;
+  display: flex;
+  padding: 1rem;
+}
+
+@supports (grid-area: auto) {
+	/* we weten hier: ondersteuning voor grid-layout*/
+
+	@media (min-width: 450px) {
+    .grid{
+      column-count: 2;
+    }
+    .afbeeldingloop{
+      display: block;
+    }
+
+  @media (min-width: 700px) {
+    .grid{
+      column-count: 3;
+    }
+    .afbeeldingloop{
+      height: 40vh;
+    }
+
+    nav{
+    	flex-direction: row;
+      display: flex;
+      border-top: 0.1rem solid black;
+    }
+
+    nav a{
+      font-size: 1.1rem;
+      border-bottom: 0.1rem solid #3E78B2;
+    }
+
+    nav a:hover{
+      color: lightgrey;
+      border-bottom: 0.1rem solid black;
+    }
+
+    .menu{
+      display: none;
+    }
+
+  @media (min-width: 810px) {
+    nav a{
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .grid{
+      column-count: 4;
+    }
+    .afbeeldingloop{
+      display: none;
+    }
+}
